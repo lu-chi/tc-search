@@ -1,6 +1,6 @@
 '''
-	Example queries: 
-	===============
+	ThreatCrowd example API queries: 
+	===============================
 	print requests.get("http://www.threatcrowd.org/searchApi/v2/domain/report/", {"domain": "aoldaily.com"}).text
 	print requests.get("http://www.threatcrowd.org/searchApi/v2/ip/report/", {"ip": "188.40.75.132"}).text
 	print requests.get("http://www.threatcrowd.org/searchApi/v2/antivirus/report/", {"antivirus" :"plugx"}).text
