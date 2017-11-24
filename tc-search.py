@@ -1,16 +1,3 @@
-'''
-	ThreatCrowd example API queries: 
-	===============================
-	print requests.get("http://www.threatcrowd.org/searchApi/v2/domain/report/", {"domain": "aoldaily.com"}).text
-	print requests.get("http://www.threatcrowd.org/searchApi/v2/ip/report/", {"ip": "188.40.75.132"}).text
-	print requests.get("http://www.threatcrowd.org/searchApi/v2/antivirus/report/", {"antivirus" :"plugx"}).text
-	
-	result =  requests.get("http://www.threatcrowd.org/searchApi/v2/email/report/", params = {"email": "william19770319@yahoo.com"})
-	print result.text
-	j = json.loads(result.text)
-	print j['domains'][0]
-'''
-
 import requests
 import json
 import argparse
@@ -18,8 +5,6 @@ import time
 import sys
 
 url = "http://www.threatcrowd.org/searchApi/v2/{}/report/"
-#url = "http://www.threatcrowd.org/searchApi/v2/{}/malware/"
-
 wait = 10
 
 def main(args):
@@ -66,7 +51,7 @@ if __name__ == '__main__':
 	parser.add_argument('-o', '--output')
 	parser.add_argument('-f', '--file', dest='inFile')
 	args = parser.parse_args()
-	if len(sys.argv)==1:
+	if len(sys.argv) == 1:
 		parser.print_help()
 		sys.exit(1)
 	else:
