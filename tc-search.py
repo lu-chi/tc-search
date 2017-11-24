@@ -32,8 +32,9 @@ def main(args):
 				print d
 				print "[+] Querying: {}, {}".format(url.format(i),d) 
 				result = requests.get(url.format(i), d)
-				j = json.loads(result.text)
-				print j
+				# j = json.loads(result.text)
+				print json.dumps(json.loads(result.text), sort_keys=True, indent=4, separators=(',',': '))
+				# print j
 				c -= 1
 				if c > 0:
 					print "[!] Sleep for {} secs...".format(wait)
