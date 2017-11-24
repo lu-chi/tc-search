@@ -23,7 +23,6 @@ def main(args):
 				except:
 					print "[!] No results available!"
 					sys.exit(1)
-
 				if args.output:
 					try:
 						with open(args.output, 'ab') as o:
@@ -34,7 +33,6 @@ def main(args):
 						sys.exit(1)
 				else:
 					print json.dumps(j, sort_keys=True, indent=4, separators=(',',': '))
-					#print json.dumps(j, indent=4)
 				c -= 1
 				if c > 0:
 					print "[!] Waiting {} secs...".format(wait)
